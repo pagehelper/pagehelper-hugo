@@ -1,0 +1,47 @@
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
+
+<div id="main">
+  <div id="hero">
+    <h1>{{.Title}}</h1>
+    <p>{{.Description}}</p>
+  </div>
+  <div id="action-buttons">
+    <a class="button outline big" href="https://github.com/pagehelper/Mybatis-PageHelper" onclick="_gaq.push(['_trackEvent', 'pagehelper', 'github', '1.0.0']);">View on Github</a>
+    <a class="button outline big" href="http://git.oschina.net/free/Mybatis_PageHelper" onclick="_gaq.push(['_trackEvent', 'pagehelper', 'gitosc', '1.0']);">View on GitOsc</a>
+    <p>
+        <a href="https://maven-badges.herokuapp.com/maven-central/com.github.pagehelper/pagehelper">
+            <img src="https://maven-badges.herokuapp.com/maven-central/com.github.pagehelper/pagehelper/badge.svg" alt="Maven central">
+        </a>
+    </p>
+  </div>
+  <div id="kube-features">
+    <div class="row gutters">
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Baseline" height="48" src="img/kube/icon-baseline.png" width="48">
+        </figure>
+        <h3>物理分页</h3>
+        <p>支持常见的 12 种数据库。Oracle,MySql,MariaDB,SQLite,DB2,<br/>PostgreSQL,SqlServer 等</p>
+      </div>
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Minimalism" height="48" src="img/kube/icon-minimalism.png" width="48">
+        </figure>
+        <h3>支持多种分页方式</h3>
+        <p>支持常见的RowBounds(PageRowBounds)，<br/>PageHelper.startPage 方法调用，<br/>Mapper 接口参数调用</p>
+      </div>
+      <div class="col col-4 item">
+        <figure>
+          <img alt="Typography" height="48" src="img/kube/icon-typo.png" width="48">
+        </figure>
+        <h3><a href="docs/interceptor/" style="text-decoration:none;">QueryInterceptor 规范</a></h3>
+        <p>使用 QueryInterceptor 规范，<br/>开发插件更轻松。</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}
