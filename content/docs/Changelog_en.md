@@ -9,11 +9,17 @@ weight = 15
 
 +++
 
+
+### 5.0.3 -2017-06-20
+
+- Solve the `supportMethodsArguments` parameter problem. It is recommended to upgrade to the latest version.
+
+
 ### 5.0.2 - 2017-05-30
 
-- `Page<E>` implements `Closeable` interface, in JDK7+ which can use the in `try ()` call, it will automatically call `PageHelper.clearPage ();`[#58](https://github.com/pagehelper/Mybatis-PageHelper/issues/58)。
+- `Page<E>` implements `Closeable` interface, in JDK7+ which can use the in `try ()` call, it will automatically call `PageHelper.clearPage ();`[#58](https://github.com/pagehelper/Mybatis-PageHelper/issues/58) 
 - fixed: DB2 paging must be specified sub-query alias, or an exception will occur [#52](https://github.com/pagehelper/Mybatis-PageHelper/issues/52)
-- fixed：if `page.size() == 0` then `pageInfo.isIsLastPage()` is `false` [#50](https://github.com/pagehelper/Mybatis-PageHelper/issues/50)
+- fixed `page.size() == 0` then `pageInfo.isIsLastPage()` is `false` [#50](https://github.com/pagehelper/Mybatis-PageHelper/issues/50)
 
 
 ### 5.0.1 - 2017-04-23
@@ -31,7 +37,7 @@ weight = 15
 - `PageHelper` continue to support previously provided parameters, Among the latest to use the document has been fully updated
 - `PageHelper` has a `helperDialect` parameter which is the same functional as the previous `dialect`
 - Added paging implementation based on pure `RowBounds` and `PageRowBounds`,
-in `com.github. pagehelper. dialect. rowbounds` package, it is used as `dialect` Parameter sample implementation, more detailed documentation will be added later
+  in `com.github. pagehelper. dialect. rowbounds` package, it is used as `dialect` Parameter sample implementation, more detailed documentation will be added later
 - Removed inappropriate orderby functions that appear in pagination plugin. It will provide a separate sort plug-ins in the future
 - Remove `PageHelper` are less commonly used methods
 - A new document, an important part of the update has been mentioned in the changelog, provides the English version of this document
